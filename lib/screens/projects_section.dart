@@ -48,14 +48,21 @@ class ProjectsSection extends StatelessWidget {
           ),
           const SizedBox(height: 32),
 
-          // Project Cards Grid
-          Wrap(
-            spacing: 24,
-            runSpacing: 24,
-            alignment: WrapAlignment.center,
-            children: featuredProjects
-                .map((project) => ProjectCard(project: project))
-                .toList(),
+          // Project Cards Horizontal Scroll
+          SizedBox(
+            height: 380,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              itemCount: featuredProjects.length,
+              separatorBuilder: (_, __) => const SizedBox(width: 24),
+              itemBuilder: (context, index) {
+                return SizedBox(
+                  width: 340,
+                  child: ProjectCard(project: featuredProjects[index]),
+                );
+              },
+            ),
           ),
 
           const SizedBox(height: 40),

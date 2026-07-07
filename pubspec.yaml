@@ -62,7 +62,7 @@ flutter:
   # the material Icons class.
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/resume_varun_pathak.pdf
+    - assets/varun_pathak_resume.pdf
     - assets/profile.jpg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

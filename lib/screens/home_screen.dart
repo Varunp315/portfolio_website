@@ -3,7 +3,6 @@ import '../widgets/navbar.dart';
 import 'about_section.dart';
 import 'projects_section.dart';
 import 'contact_section.dart';
-import 'skills_section.dart';
 import '../widgets/intro_section.dart';
 import 'footer_section.dart';
 
@@ -20,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final GlobalKey homeKey = GlobalKey();
   final GlobalKey aboutKey = GlobalKey();
-  final GlobalKey skillsKey = GlobalKey();
   final GlobalKey projectsKey = GlobalKey();
   final GlobalKey contactKey = GlobalKey();
 
@@ -61,9 +59,6 @@ class _HomeScreenState extends State<HomeScreen> {
               case 'About':
                 _scrollTo(aboutKey);
                 break;
-              case 'Skills':
-                _scrollTo(skillsKey);
-                break;
               case 'Projects':
                 _scrollTo(projectsKey);
                 break;
@@ -81,7 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(key: homeKey, child: const IntroSection()),
                 Container(key: aboutKey, child: const AboutSection()),
-                Container(key: skillsKey, child: const SkillsSection()),
                 Container(key: projectsKey, child: const ProjectsSection()),
                 Container(key: contactKey, child: const ContactSection()),
                 const FooterSection(),

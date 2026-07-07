@@ -84,14 +84,6 @@ class _NavBarState extends State<NavBar> with SingleTickerProviderStateMixin {
       TextButton(
         style: buttonStyle,
         onPressed: () {
-          widget.onNavItemSelected('Skills');
-          if (isVertical) _closeDrawer();
-        },
-        child: Text('Skills', style: style),
-      ),
-      TextButton(
-        style: buttonStyle,
-        onPressed: () {
           widget.onNavItemSelected('Projects');
           if (isVertical) _closeDrawer();
         },
